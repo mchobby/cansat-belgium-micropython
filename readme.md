@@ -1,8 +1,15 @@
-# CanSat-Belgium-MicroPython
+# Propel a CanSat with a Raspberry-Pi Pico under MicroPython
 
-This GitHub holds the code for the CanSat-Belgium-MicroPython Wiki available at [cansat-python.mchobby.be](http://cansat-python.mchobby.be)
+This GitHub holds the code for the [CanSat-Pico-Belgium Wiki](https://wiki.mchobby.be/index.php?title=ENG-CANSAT-PICO-BELGIUM) available at [cansat-pico.mchobby.be](https://cansat-pico.mchobby.be)
 
-Please go to the wiki for plateform, wiring, samples, link to community page, etc.
+![Cansat Pico Belgium](docs/_static/CANSAT-PICO-Assembled.jpg)
 
-Cheers,
+Please go to the wiki for:
+* plateform description,
+* wiring & schematics
+* Example script,
+* link to community page,
+* etc.
+
+Cheers,<br />
 Dominique
