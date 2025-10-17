@@ -17,6 +17,9 @@ from rfm69 import RFM69
 from bme280 import BME280, BMP280_I2CADDR
 import time
 
+# Deactivate PowerSafe (lower ripple)
+Pin( 23, Pin.OUT, value=True )
+
 # Onboard LED
 led = Pin(25, Pin.OUT)
 def led_error( count ):
@@ -40,10 +43,10 @@ NODE_ID        = 120 # ID of this node
 BASESTATION_ID = 100 # ID of the node (base station) to be contacted
 
 # Buses & Pins
-spi = SPI(0, baudrate=50000, polarity=0, phase=0, firstbit=SPI.MSB)
+spi = SPI(0, miso=Pin(4), mosi=Pin(7), sck=Pin(6), baudrate=50000, polarity=0, phase=0, firstbit=SPI.MSB)
 nss = Pin( 5, Pin.OUT, value=True )
 rst = Pin( 3, Pin.OUT, value=False )
-i2c = I2C(0)
+i2c = I2C(0, sda=Pin(8), scl=Pin(9) )
 
 # RFM Module
 try:

@@ -3,6 +3,9 @@
 #
 from machine import ADC, Pin
 
+# Deactivate PowerSafe (lower ripple)
+Pin( 23, Pin.OUT, value=True )
+
 adc = ADC(Pin(26))
 while True:
     value = adc.read_u16()

@@ -22,11 +22,14 @@ ENCRYPTION_KEY = b"\x01\x02\x03\x04\x05\x06\x07\x08\x01\x02\x03\x04\x05\x06\x07\
 NODE_ID        = 120 # ID of this node
 BASESTATION_ID = 100 # ID of the node (base station) to be contacted
 
+# Deactivate PowerSafe (lower ripple)
+Pin( 23, Pin.OUT, value=True )
+
 # Buses & Pins
-spi = SPI(0, baudrate=50000, polarity=0, phase=0, firstbit=SPI.MSB)
+spi = SPI(0, miso=Pin(4), mosi=Pin(7), sck=Pin(6), baudrate=50000, polarity=0, phase=0, firstbit=SPI.MSB)
 nss = Pin( 5, Pin.OUT, value=True )
 rst = Pin( 3, Pin.OUT, value=False )
-i2c = I2C(0)
+i2c = I2C(0, sda=Pin(8), scl=Pin(9) )
 
 # RFM Module
 rfm = RFM69( spi=spi, nss=nss, reset=rst )

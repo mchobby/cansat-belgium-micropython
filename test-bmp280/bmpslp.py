@@ -2,11 +2,12 @@
 # Calculate corresponding SLP pressure
 #   (SLP: sea level pressure)
 #
-from machine import I2C
+from machine import I2C, Pin
 # BME280 aslo work for BMP280
 from bme280 import BME280, BMP280_I2CADDR
 from time import sleep
-i2c = I2C(1)
+
+i2c = I2C(0, sda=>Pin(8), scl=Pin(9) )
 
 # Sensor altitude required to
 # calculate SLP (See Level Pressure)
