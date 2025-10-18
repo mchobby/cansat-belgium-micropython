@@ -626,7 +626,7 @@ class RFM69:
 
 	def sample_rssi(self): # TODO: check
 		""" Make a request to radio module for sampling the rssi. Must only be called in RX mode.
-		 	(Doesn't appears to work, while loop nevers return)"""
+		 	(Doesn't appears to work, while loop nevers return) """
 		if (self._mode != RFM69_MODE_RX ):
 			# Not sure what happens otherwise, so check this
 			return 0
