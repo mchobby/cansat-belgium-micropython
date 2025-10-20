@@ -1,6 +1,18 @@
-# Simple GPS module demonstration.
-# Will wait for a fix and print a message every second with the current location
-# and other details.
+"""
+ GPS MicroPython examples for CanSat-Pico-Kit-V2
+
+ Wait for a fix (LED=FIX) and print a message every second with the current location
+ and other details.
+
+Project:
+  https://github.com/mchobby/cansat-belgium-micropython
+External Source:
+  https://github.com/mchobby/esp8266-upy/tree/master/gps-ultimate
+
+Where to buy:
+* CANSAT-PICO-KIT-V2: https://shop.mchobby.be/fr/nouveaute/2824-kit-cansat-v2-avec-raspberry-pi-pico-micropython-3232100028241.html
+* CANSAT-GPS-V2: https://shop.mchobby.be/fr/cansat/2862-carte-gps-attache-parachute-pour-cansat-pico-v2-3232100028623.html
+"""
 from machine import UART,Pin
 import utime as time
 
