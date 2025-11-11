@@ -48,6 +48,7 @@ while True:
 		# And decode to ASCII text
 		packet_text = str(packet, "ascii")
 		print("Received (ASCII):", packet_text)
-		rfm.sample_rssi()
-		print("RSSI            : %3.2f" % rfm.rssi )
+		# RSSI Evaluation sometime hold the SPI for infinite time
+		# rfm.sample_rssi()
+		# print("RSSI            : %3.2f" % rfm.rssi )
 		print("-"*40)
